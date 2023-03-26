@@ -28,6 +28,15 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "my-code-actions.actions": {
+      "[html]": {
+        "Create function {{atCursor:$1}}": {
+          "file": "${fileBasenameNoExtension}.ts",
+          "atCursor": "\\(click\\)=\"([^\"]+)\\(\\)\"",
+          "text": "function {{atCursor:$1}}() {\n}\n\n"
+        }
+      }
+    },
   }
 }

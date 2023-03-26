@@ -1,0 +1,26 @@
+<tr *ngIf="p">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+    <td>{{p.selected}}</td>
+    <td>{{p.available}}</td>
+    <td>
+        <button (click)="OnSelect(p)" [ngClass]="!p.selected?' btn-outline-success':' btn-outline-danger'" class="btn btn-sm">
+            <span *ngIf="p.selected">Unselect</span>
+            <span *ngIf="!p.selected">Select</span>
+        </button>
+    </td>
+    <td>
+        <button (click)="OnDelete(p)" class="btn btn-outline-danger">
+            <span class="fa fa-trash-o">
+            </span>
+        </button>
+    </td>
+    <td>
+        <button (click)="OnUpdate(p)" class="btn btn-outline-danger">
+            <span class="fa fa-edit">
+            </span>
+        </button>
+    </td>
+ </tr>
